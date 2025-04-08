@@ -54,5 +54,13 @@ Performance metrics are logged in `trading_logs_revised/` including:
 ## 6. Graphs
 See included visualizations in `trading_logs_revised/`:
 - `golden_cross_strategy.png`: Baseline strategy performance
-- `*_evaluation.png`: RL model evaluations
-- `model_comparison_portfolio.png`: Performance comparison
+- ![image](https://github.com/user-attachments/assets/39aba42a-28e8-4a4f-bb58-cb08297c166a)
+  
+| Model        | Final Asset ($) |   ROI (%)  | Num Trades |
+|--------------|------------------|------------|------------|
+| GoldenCross  |   88,372.84      | -11.63     |   13      |
+| PPO          |  104,025.94      |   4.03     |   10      |
+| A2C          |  104,025.94      |   4.03     |   10      |
+| DQN          |  118,409.65      |  18.41     |    14      |
+
+
