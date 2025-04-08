@@ -1,0 +1,120 @@
+2025-04-08 21:13:59,885 - TradingBotRevised - INFO - Starting revised trading bot execution...
+2025-04-08 21:13:59,886 - TradingBotRevised - INFO - Downloading data for GOOG from 2022-01-01 to 2024-01-01
+2025-04-08 21:14:02,642 - TradingBotRevised - INFO - Successfully downloaded 501 data points for GOOG.
+2025-04-08 21:14:02,654 - TradingBotRevised - INFO - Dropped 49 rows due to indicator NaNs.
+2025-04-08 21:14:02,656 - TradingBotRevised - INFO - Data prepared with indicators. Final shape: (452, 13)
+2025-04-08 21:14:02,657 - TradingBotRevised - INFO - --- Running Golden Cross Strategy ---
+2025-04-08 21:14:02,783 - TradingBotRevised - INFO - Golden Cross Strategy - Total Return: -11.63%
+2025-04-08 21:14:02,794 - TradingBotRevised - INFO - Golden Cross Strategy - Sharpe Ratio: -0.17
+2025-04-08 21:14:02,794 - TradingBotRevised - INFO - Golden Cross Strategy - Max Drawdown: -29.83%
+2025-04-08 21:14:03,120 - TradingBotRevised - INFO - Saved Golden Cross plot to trading_logs_revised/golden_cross_strategy.png
+2025-04-08 21:14:03,121 - TradingBotRevised - INFO - --- Training PPO for 100000 timesteps ---
+2025-04-08 21:14:17,472 - TradingBotRevised - INFO - Episode 10, Mean Reward (last 10): -110.33
+2025-04-08 21:14:29,518 - TradingBotRevised - INFO - Episode 20, Mean Reward (last 10): -100.58
+2025-04-08 21:14:41,692 - TradingBotRevised - INFO - Episode 30, Mean Reward (last 10): -92.87
+2025-04-08 21:14:53,909 - TradingBotRevised - INFO - Episode 40, Mean Reward (last 10): -80.81
+2025-04-08 21:15:08,023 - TradingBotRevised - INFO - Episode 50, Mean Reward (last 10): -59.94
+2025-04-08 21:15:21,061 - TradingBotRevised - INFO - Episode 60, Mean Reward (last 10): -44.36
+2025-04-08 21:15:34,351 - TradingBotRevised - INFO - Episode 70, Mean Reward (last 10): -29.19
+2025-04-08 21:15:47,446 - TradingBotRevised - INFO - Episode 80, Mean Reward (last 10): -31.20
+2025-04-08 21:16:00,442 - TradingBotRevised - INFO - Episode 90, Mean Reward (last 10): -29.34
+2025-04-08 21:16:14,969 - TradingBotRevised - INFO - Episode 100, Mean Reward (last 10): -22.00
+2025-04-08 21:16:27,891 - TradingBotRevised - INFO - Episode 110, Mean Reward (last 10): -12.15
+2025-04-08 21:16:40,602 - TradingBotRevised - INFO - Episode 120, Mean Reward (last 10): -20.17
+2025-04-08 21:16:53,400 - TradingBotRevised - INFO - Episode 130, Mean Reward (last 10): -20.11
+2025-04-08 21:17:05,883 - TradingBotRevised - INFO - Episode 140, Mean Reward (last 10): -24.84
+2025-04-08 21:17:19,646 - TradingBotRevised - INFO - Episode 150, Mean Reward (last 10): -25.60
+2025-04-08 21:17:32,584 - TradingBotRevised - INFO - Episode 160, Mean Reward (last 10): -10.03
+2025-04-08 21:17:45,050 - TradingBotRevised - INFO - Episode 170, Mean Reward (last 10): -8.46
+2025-04-08 21:17:57,396 - TradingBotRevised - INFO - Episode 180, Mean Reward (last 10): -17.84
+2025-04-08 21:18:09,688 - TradingBotRevised - INFO - Episode 190, Mean Reward (last 10): -20.93
+2025-04-08 21:18:23,486 - TradingBotRevised - INFO - Episode 200, Mean Reward (last 10): -20.70
+2025-04-08 21:18:35,162 - TradingBotRevised - INFO - Episode 210, Mean Reward (last 10): -25.16
+2025-04-08 21:18:46,633 - TradingBotRevised - INFO - Episode 220, Mean Reward (last 10): -28.80
+2025-04-08 21:18:50,231 - TradingBotRevised - INFO - Completed training PPO
+2025-04-08 21:18:50,245 - TradingBotRevised - INFO - Saved trained PPO model.
+2025-04-08 21:18:56,987 - TradingBotRevised - INFO - PPO - Evaluation Complete
+2025-04-08 21:18:56,988 - TradingBotRevised - INFO - PPO - Final Asset: $104025.94
+2025-04-08 21:18:56,989 - TradingBotRevised - INFO - PPO - ROI: 4.03%
+2025-04-08 21:18:56,990 - TradingBotRevised - INFO - PPO - Mean Reward (per episode): -39.5530
+2025-04-08 21:18:56,991 - TradingBotRevised - INFO - Plotting results for PPO
+2025-04-08 21:18:57,226 - TradingBotRevised - INFO - Saved evaluation plot to trading_logs_revised/PPO_evaluation.png
+2025-04-08 21:18:57,227 - TradingBotRevised - INFO - --- Training A2C for 100000 timesteps ---
+2025-04-08 21:19:08,672 - TradingBotRevised - INFO - Episode 10, Mean Reward (last 10): -40.23
+2025-04-08 21:19:19,496 - TradingBotRevised - INFO - Episode 20, Mean Reward (last 10): -40.49
+2025-04-08 21:19:30,329 - TradingBotRevised - INFO - Episode 30, Mean Reward (last 10): -39.84
+2025-04-08 21:19:41,202 - TradingBotRevised - INFO - Episode 40, Mean Reward (last 10): -39.55
+2025-04-08 21:19:52,509 - TradingBotRevised - INFO - Episode 50, Mean Reward (last 10): -39.55
+2025-04-08 21:20:03,350 - TradingBotRevised - INFO - Episode 60, Mean Reward (last 10): -40.20
+2025-04-08 21:20:14,172 - TradingBotRevised - INFO - Episode 70, Mean Reward (last 10): -39.55
+2025-04-08 21:20:24,964 - TradingBotRevised - INFO - Episode 80, Mean Reward (last 10): -39.55
+2025-04-08 21:20:36,031 - TradingBotRevised - INFO - Episode 90, Mean Reward (last 10): -39.55
+2025-04-08 21:20:47,260 - TradingBotRevised - INFO - Episode 100, Mean Reward (last 10): -39.55
+2025-04-08 21:20:58,904 - TradingBotRevised - INFO - Episode 110, Mean Reward (last 10): -39.55
+2025-04-08 21:21:10,543 - TradingBotRevised - INFO - Episode 120, Mean Reward (last 10): -39.55
+2025-04-08 21:21:21,717 - TradingBotRevised - INFO - Episode 130, Mean Reward (last 10): -39.55
+2025-04-08 21:21:32,604 - TradingBotRevised - INFO - Episode 140, Mean Reward (last 10): -39.55
+2025-04-08 21:21:43,453 - TradingBotRevised - INFO - Episode 150, Mean Reward (last 10): -39.55
+2025-04-08 21:21:54,233 - TradingBotRevised - INFO - Episode 160, Mean Reward (last 10): -39.55
+2025-04-08 21:22:06,585 - TradingBotRevised - INFO - Episode 170, Mean Reward (last 10): -39.55
+2025-04-08 21:22:17,634 - TradingBotRevised - INFO - Episode 180, Mean Reward (last 10): -39.55
+2025-04-08 21:22:29,311 - TradingBotRevised - INFO - Episode 190, Mean Reward (last 10): -39.55
+2025-04-08 21:22:40,573 - TradingBotRevised - INFO - Episode 200, Mean Reward (last 10): -39.91
+2025-04-08 21:22:53,366 - TradingBotRevised - INFO - Episode 210, Mean Reward (last 10): -39.55
+2025-04-08 21:23:05,264 - TradingBotRevised - INFO - Episode 220, Mean Reward (last 10): -39.55
+2025-04-08 21:23:07,461 - TradingBotRevised - INFO - Completed training A2C
+2025-04-08 21:23:07,467 - TradingBotRevised - INFO - Saved trained A2C model.
+2025-04-08 21:23:14,243 - TradingBotRevised - INFO - A2C - Evaluation Complete
+2025-04-08 21:23:14,244 - TradingBotRevised - INFO - A2C - Final Asset: $104025.94
+2025-04-08 21:23:14,244 - TradingBotRevised - INFO - A2C - ROI: 4.03%
+2025-04-08 21:23:14,245 - TradingBotRevised - INFO - A2C - Mean Reward (per episode): -39.5530
+2025-04-08 21:23:14,245 - TradingBotRevised - INFO - Plotting results for A2C
+2025-04-08 21:23:14,501 - TradingBotRevised - INFO - Saved evaluation plot to trading_logs_revised/A2C_evaluation.png
+2025-04-08 21:23:14,501 - TradingBotRevised - INFO - --- Training DQN for 100000 timesteps ---
+2025-04-08 21:23:25,939 - TradingBotRevised - INFO - Episode 10, Mean Reward (last 10): -119.82
+2025-04-08 21:23:36,571 - TradingBotRevised - INFO - Episode 20, Mean Reward (last 10): -145.35
+2025-04-08 21:23:46,844 - TradingBotRevised - INFO - Episode 30, Mean Reward (last 10): -262.92
+2025-04-08 21:23:56,863 - TradingBotRevised - INFO - Episode 40, Mean Reward (last 10): -315.71
+2025-04-08 21:24:07,035 - TradingBotRevised - INFO - Episode 50, Mean Reward (last 10): -260.25
+2025-04-08 21:24:17,106 - TradingBotRevised - INFO - Episode 60, Mean Reward (last 10): -231.99
+2025-04-08 21:24:26,979 - TradingBotRevised - INFO - Episode 70, Mean Reward (last 10): -258.62
+2025-04-08 21:24:37,080 - TradingBotRevised - INFO - Episode 80, Mean Reward (last 10): -215.70
+2025-04-08 21:24:47,296 - TradingBotRevised - INFO - Episode 90, Mean Reward (last 10): -233.67
+2025-04-08 21:24:58,377 - TradingBotRevised - INFO - Episode 100, Mean Reward (last 10): -221.15
+2025-04-08 21:25:08,474 - TradingBotRevised - INFO - Episode 110, Mean Reward (last 10): -183.09
+2025-04-08 21:25:18,683 - TradingBotRevised - INFO - Episode 120, Mean Reward (last 10): -216.02
+2025-04-08 21:25:29,083 - TradingBotRevised - INFO - Episode 130, Mean Reward (last 10): -148.45
+2025-04-08 21:25:39,408 - TradingBotRevised - INFO - Episode 140, Mean Reward (last 10): -157.43
+2025-04-08 21:25:49,819 - TradingBotRevised - INFO - Episode 150, Mean Reward (last 10): -214.80
+2025-04-08 21:26:00,228 - TradingBotRevised - INFO - Episode 160, Mean Reward (last 10): -136.47
+2025-04-08 21:26:10,591 - TradingBotRevised - INFO - Episode 170, Mean Reward (last 10): -155.96
+2025-04-08 21:26:20,934 - TradingBotRevised - INFO - Episode 180, Mean Reward (last 10): -116.76
+2025-04-08 21:26:31,366 - TradingBotRevised - INFO - Episode 190, Mean Reward (last 10): -132.16
+2025-04-08 21:26:41,856 - TradingBotRevised - INFO - Episode 200, Mean Reward (last 10): -85.75
+2025-04-08 21:26:53,517 - TradingBotRevised - INFO - Episode 210, Mean Reward (last 10): -133.51
+2025-04-08 21:27:04,280 - TradingBotRevised - INFO - Episode 220, Mean Reward (last 10): -91.00
+2025-04-08 21:27:06,133 - TradingBotRevised - INFO - Completed training DQN
+2025-04-08 21:27:06,138 - TradingBotRevised - INFO - Saved trained DQN model.
+2025-04-08 21:27:11,851 - TradingBotRevised - INFO - DQN - Evaluation Complete
+2025-04-08 21:27:11,852 - TradingBotRevised - INFO - DQN - Final Asset: $118409.65
+2025-04-08 21:27:11,852 - TradingBotRevised - INFO - DQN - ROI: 18.41%
+2025-04-08 21:27:11,853 - TradingBotRevised - INFO - DQN - Mean Reward (per episode): -33.5020
+2025-04-08 21:27:11,853 - TradingBotRevised - INFO - Plotting results for DQN
+2025-04-08 21:27:12,076 - TradingBotRevised - INFO - Saved evaluation plot to trading_logs_revised/DQN_evaluation.png
+2025-04-08 21:27:12,077 - TradingBotRevised - INFO - --- Comparing Models ---
+2025-04-08 21:27:12,215 - TradingBotRevised - INFO - Saved comparison plot to trading_logs_revised/model_comparison_portfolio.png
+2025-04-08 21:27:12,216 - TradingBotRevised - INFO - Model Comparison Table:
+         Model  Final Asset ($)    ROI (%)  Total Reward  Num Trades
+0  GoldenCross     88372.837891 -11.627162           NaN        13.0
+1          PPO    104025.938168   4.025938    -39.552991        10.0
+2          A2C    104025.938168   4.025938    -39.552991        10.0
+3          DQN    118409.653812  18.409654    -33.501993        14.0
+2025-04-08 21:27:12,221 - TradingBotRevised - INFO - Saved comparison CSV to trading_logs_revised/model_comparison.csv
+2025-04-08 21:27:12,221 - TradingBotRevised - INFO - Trading bot execution finished.
+2025-04-08 21:27:12,223 - TradingBotRevised - INFO - 
+Final Comparison:
+         Model  Final Asset ($)    ROI (%)  Total Reward  Num Trades
+0  GoldenCross     88372.837891 -11.627162           NaN        13.0
+1          PPO    104025.938168   4.025938    -39.552991        10.0
+2          A2C    104025.938168   4.025938    -39.552991        10.0
+3          DQN    118409.653812  18.409654    -33.501993        14.0

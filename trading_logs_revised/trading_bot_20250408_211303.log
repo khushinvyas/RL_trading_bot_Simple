@@ -1,0 +1,126 @@
+2025-04-08 21:13:03,602 - TradingBotRevised - INFO - Starting revised trading bot execution...
+2025-04-08 21:13:03,603 - TradingBotRevised - INFO - Downloading data for GOOG from 2022-01-01 to 2024-01-01
+2025-04-08 21:13:06,884 - TradingBotRevised - INFO - Successfully downloaded 501 data points for GOOG.
+2025-04-08 21:13:06,897 - TradingBotRevised - INFO - Dropped 49 rows due to indicator NaNs.
+2025-04-08 21:13:06,899 - TradingBotRevised - INFO - Data prepared with indicators. Final shape: (452, 13)
+2025-04-08 21:13:06,899 - TradingBotRevised - INFO - --- Running Golden Cross Strategy ---
+2025-04-08 21:13:07,014 - TradingBotRevised - INFO - Golden Cross Strategy - Total Return: -11.63%
+2025-04-08 21:13:07,025 - TradingBotRevised - INFO - Golden Cross Strategy - Sharpe Ratio: -0.17
+2025-04-08 21:13:07,026 - TradingBotRevised - INFO - Golden Cross Strategy - Max Drawdown: -29.83%
+2025-04-08 21:13:07,352 - TradingBotRevised - INFO - Saved Golden Cross plot to trading_logs_revised/golden_cross_strategy.png
+2025-04-08 21:13:07,353 - TradingBotRevised - INFO - --- Training PPO for 100000 timesteps ---
+2025-04-08 21:13:08,872 - TradingBotRevised - ERROR - Error during training PPO: loop of ufunc does not support argument 0 of type numpy.float64 which has no callable log method
+AttributeError: 'numpy.float64' object has no attribute 'log'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\Sem 6\RL\project\trading.py", line 477, in train_model
+    model.learn(total_timesteps=total_timesteps, callback=callback, tb_log_name=model_name)
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 218, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\vec_env\base_vec_env.py", line 222, in step
+    return self.step_wait()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 59, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(  # type: ignore[assignment]
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\Sem 6\RL\project\trading.py", line 202, in step
+    reward = np.log(new_total_asset / self.total_asset_history[-1]) * 100 if self.total_asset_history else 0
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\site-packages\pandas\core\generic.py", line 2016, in __array_ufunc__
+    return arraylike.array_ufunc(self, ufunc, method, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\site-packages\pandas\core\arraylike.py", line 396, in array_ufunc
+    result = getattr(ufunc, method)(*inputs, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: loop of ufunc does not support argument 0 of type numpy.float64 which has no callable log method
+2025-04-08 21:13:08,875 - TradingBotRevised - WARNING - Training failed for PPO, skipping evaluation and plotting.
+2025-04-08 21:13:08,875 - TradingBotRevised - INFO - --- Training A2C for 100000 timesteps ---
+2025-04-08 21:13:08,887 - TradingBotRevised - ERROR - Error during training A2C: loop of ufunc does not support argument 0 of type numpy.float64 which has no callable log method
+AttributeError: 'numpy.float64' object has no attribute 'log'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\Sem 6\RL\project\trading.py", line 477, in train_model
+    model.learn(total_timesteps=total_timesteps, callback=callback, tb_log_name=model_name)
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\a2c\a2c.py", line 201, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 218, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\vec_env\base_vec_env.py", line 222, in step
+    return self.step_wait()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 59, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(  # type: ignore[assignment]
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\Sem 6\RL\project\trading.py", line 202, in step
+    reward = np.log(new_total_asset / self.total_asset_history[-1]) * 100 if self.total_asset_history else 0
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\site-packages\pandas\core\generic.py", line 2016, in __array_ufunc__
+    return arraylike.array_ufunc(self, ufunc, method, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\site-packages\pandas\core\arraylike.py", line 396, in array_ufunc
+    result = getattr(ufunc, method)(*inputs, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: loop of ufunc does not support argument 0 of type numpy.float64 which has no callable log method
+2025-04-08 21:13:08,888 - TradingBotRevised - WARNING - Training failed for A2C, skipping evaluation and plotting.
+2025-04-08 21:13:08,889 - TradingBotRevised - INFO - --- Training DQN for 100000 timesteps ---
+2025-04-08 21:13:08,900 - TradingBotRevised - ERROR - Error during training DQN: loop of ufunc does not support argument 0 of type numpy.float64 which has no callable log method
+AttributeError: 'numpy.float64' object has no attribute 'log'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\Sem 6\RL\project\trading.py", line 477, in train_model
+    model.learn(total_timesteps=total_timesteps, callback=callback, tb_log_name=model_name)
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\dqn\dqn.py", line 267, in learn
+    return super().learn(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\off_policy_algorithm.py", line 328, in learn
+    rollout = self.collect_rollouts(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\off_policy_algorithm.py", line 560, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(actions)
+                                     ^^^^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\vec_env\base_vec_env.py", line 222, in step
+    return self.step_wait()
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\khush\AppData\Roaming\Python\Python311\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 59, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(  # type: ignore[assignment]
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "e:\Sem 6\RL\project\trading.py", line 202, in step
+    reward = np.log(new_total_asset / self.total_asset_history[-1]) * 100 if self.total_asset_history else 0
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\site-packages\pandas\core\generic.py", line 2016, in __array_ufunc__
+    return arraylike.array_ufunc(self, ufunc, method, *inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\site-packages\pandas\core\arraylike.py", line 396, in array_ufunc
+    result = getattr(ufunc, method)(*inputs, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: loop of ufunc does not support argument 0 of type numpy.float64 which has no callable log method
+2025-04-08 21:13:08,902 - TradingBotRevised - WARNING - Training failed for DQN, skipping evaluation and plotting.
+2025-04-08 21:13:08,903 - TradingBotRevised - INFO - --- Comparing Models ---
+2025-04-08 21:13:09,048 - TradingBotRevised - INFO - Saved comparison plot to trading_logs_revised/model_comparison_portfolio.png
+2025-04-08 21:13:09,049 - TradingBotRevised - INFO - Model Comparison Table:
+         Model  Final Asset ($)    ROI (%)  Total Reward  Num Trades
+0  GoldenCross     88372.777164 -11.627223           NaN          13
+2025-04-08 21:13:09,053 - TradingBotRevised - INFO - Saved comparison CSV to trading_logs_revised/model_comparison.csv
+2025-04-08 21:13:09,053 - TradingBotRevised - INFO - Trading bot execution finished.
+2025-04-08 21:13:09,054 - TradingBotRevised - INFO - 
+Final Comparison:
+         Model  Final Asset ($)    ROI (%)  Total Reward  Num Trades
+0  GoldenCross     88372.777164 -11.627223           NaN          13
